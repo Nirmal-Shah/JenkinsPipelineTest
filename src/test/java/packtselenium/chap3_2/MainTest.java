@@ -22,7 +22,7 @@ public class MainTest {
 	@Test
 	public void verify(){
 		driver.get("http://www.seleniumhq.org");
-		String expectedTitle = "Selenium - Web Browser Automation12352";
+		String expectedTitle = "Selenium - Web Browser Automation123";
 		String actualTitle = driver.getTitle();
 		Assert.assertEquals(expectedTitle, actualTitle,"wrong title");
 	}
