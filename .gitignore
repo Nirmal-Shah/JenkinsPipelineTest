@@ -1,0 +1,9 @@
+properties/*
+ExecutionDetails/Output/*
+ExecutionDetails/Log/*
+ExecutionDetails/Report/*
+ExecutionDetails/Xunit/*
+ExecutionDetails/
+ExecutionDetails
+target/
+.settings/
