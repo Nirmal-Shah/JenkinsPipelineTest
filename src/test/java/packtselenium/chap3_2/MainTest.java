@@ -1,6 +1,6 @@
 package packtselenium.chap3_2;
 
-import static org.testng.Assert.assertEquals;
+import java.io.File;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +14,10 @@ public class MainTest {
 	
 	@BeforeTest
 	public void setUp(){
+		File file = new File(System.getProperty("user.dir")+"//resources//drivers//chromedriver.exe");
+		file.setExecutable(true);
+		file.setReadable(true);
+		file.setWritable(true);
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//resources//drivers//chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -21,7 +25,7 @@ public class MainTest {
 	
 	@Test
 	public void verify(){
-		driver.get("http://www.seleniumhq.org");
+		driver.get("http://localhost:8070/SimpleWebApp/");
 		String expectedTitle = "Selenium - Web Browser Automation";
 		String actualTitle = driver.getTitle();
 		Assert.assertEquals(actualTitle,expectedTitle,"wrong title");
