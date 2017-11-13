@@ -14,11 +14,11 @@ public class MainTest {
 	
 	@BeforeTest
 	public void setUp(){
-		File file = new File(System.getProperty("user.dir")+"//resources//drivers//chromedriver.exe");
+		File file = new File(System.getProperty("user.dir")+"//resources//drivers//chromedriver");
 		file.setExecutable(true);
 		file.setReadable(true);
 		file.setWritable(true);
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//resources//drivers//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//resources//drivers//chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}
